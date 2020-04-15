@@ -2,10 +2,10 @@ package Model;
 
 public class Score {
 
-    int playerOneScore;
-    int playerTwoScore;
-    final int MAX_SCORE; // Defines how many points needed till win
-    boolean gameOver;
+    private int playerOneScore;
+    private int playerTwoScore;
+    private final int MAX_SCORE; // Defines how many points needed till win
+    private boolean gameOver;
 
     public Score(){
         this(5);
@@ -37,5 +37,9 @@ public class Score {
         if(this.playerTwoScore >= this.MAX_SCORE){
             gameOver = true;
         }
+    }
+
+    public boolean getGameOver(){
+        return gameOver;
     }
 }
