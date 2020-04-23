@@ -6,17 +6,17 @@ import Model.*;
 
 public class Controller {
     Model model;
-    LeftPaddle leftPaddle; // Refs for efficient access
-    RightPaddle rightPaddle;
-    Ball ball;
+    LeftPaddleData leftPaddleData; // Refs for efficient access
+    RightPaddleData rightPaddleData;
+    BallData ballData;
 
     View view;
     public Controller(Model model, View view){
         // Init Model
         this.model = model;
-        this.leftPaddle = model.getLeftPaddle();
-        this.rightPaddle = model.getRightPaddle();
-        this.ball = model.getBall();
+        this.leftPaddleData = model.getLeftPaddle();
+        this.rightPaddleData = model.getRightPaddle();
+        this.ballData = model.getBall();
 
         // Init view
         this.view = view;
@@ -29,5 +29,6 @@ public class Controller {
         }
 
         // COLLISION DETECTION FUNCTIONS:
+        
     }
 }

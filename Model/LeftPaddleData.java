@@ -1,20 +1,21 @@
 package Model;
 
-public class LeftPaddle {
-    int leftPaddleX; // This represents the left paddle's top left x coord value
-    int leftPaddleY; // And so on..
-    int leftPaddleHeight;
-    int leftPaddleWidth;
+public class LeftPaddleData {
+    private int leftPaddleX; // This represents the left paddle's top left x coord value
+    private int leftPaddleY; // And so on..
+    private int leftPaddleWidth;
+    private int leftPaddleHeight;
+    
 
-    public LeftPaddle(){
-        this(10, 650, 100, 20); // TODO Adjust using getHeight method of FieldPanel
+    public LeftPaddleData(){
+        this(50, 200, 20, 150); // TODO Adjust using getHeight method of FieldPanel
     }
 
-    public LeftPaddle(int leftPaddleX, int leftPaddleY, int leftPaddleHeight, int leftPaddleWidth) {
+    public LeftPaddleData(int leftPaddleX, int leftPaddleY, int leftPaddleWidth, int leftPaddleHeight) {
         this.leftPaddleX = leftPaddleX;
         this.leftPaddleY = leftPaddleY;
-        this.leftPaddleHeight = leftPaddleHeight;
         this.leftPaddleWidth = leftPaddleWidth;
+        this.leftPaddleHeight = leftPaddleHeight;
     }
 
     public int getLeftPaddleX() {

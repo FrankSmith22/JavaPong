@@ -3,15 +3,15 @@ package Model;
 public class Model {
     private Score score;
 
-    LeftPaddle leftPaddle;
-    RightPaddle rightPaddle;
-    Ball ball;
+    LeftPaddleData leftPaddleData;
+    RightPaddleData rightPaddleData;
+    BallData ballData;
 
     public Model(){
         score = new Score();
-        leftPaddle = new LeftPaddle(); // Calling empty constructor inits with some default values
-        rightPaddle = new RightPaddle(); // Prefer to call using getHeight of FieldPanel
-        ball = new Ball();
+        leftPaddleData = new LeftPaddleData(); // Calling empty constructor inits with some default values
+        rightPaddleData = new RightPaddleData(); // Prefer to call using getHeight of FieldPanel
+        ballData = new BallData();
         /*
         So far, Score works like this: initial scores set to 0,
         then methods will be used to increment scores, checking to see if
@@ -23,15 +23,15 @@ public class Model {
         return score;
     }
 
-    public LeftPaddle getLeftPaddle() {
-        return leftPaddle;
+    public LeftPaddleData getLeftPaddle() {
+        return leftPaddleData;
     }
 
-    public RightPaddle getRightPaddle() {
-        return rightPaddle;
+    public RightPaddleData getRightPaddle() {
+        return rightPaddleData;
     }
 
-    public Ball getBall() {
-        return ball;
+    public BallData getBall() {
+        return ballData;
     }
 }
