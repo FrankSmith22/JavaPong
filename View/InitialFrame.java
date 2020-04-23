@@ -8,7 +8,7 @@ public class InitialFrame extends JFrame {
     public InitialFrame(){
         super("Java Pong!");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(1000,500);
+        setSize(1000,700);
         setVisible(true);
 
         iP = new InitialPanel();
