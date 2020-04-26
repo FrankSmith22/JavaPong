@@ -1,51 +1,43 @@
 package Model;
 
 public class RightPaddleData {
-    private int rightPaddleX;
-    private int rightPaddleY;
-    private int rightPaddleWidth;
-    private int rightPaddleHeight;
+    private int x;
+    private int y;
+    private int width;
+    private int height;
 
     public RightPaddleData(){
         this(950, 200, 20, 150); // TODO Adjust using getHeight method of FieldPanel
     }
 
-    public RightPaddleData(int rightPaddleX, int rightPaddleY, int rightPaddleWidth, int rightPaddleHeight) {
-        this.rightPaddleX = rightPaddleX;
-        this.rightPaddleY = rightPaddleY;
-        this.rightPaddleWidth = rightPaddleWidth;
-        this.rightPaddleHeight = rightPaddleHeight;
+    public RightPaddleData(int x, int y, int width, int height) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
     }
 
-    public int getRightPaddleX() {
-        return rightPaddleX;
+    public int getX() {
+        return x;
     }
 
-    public void setRightPaddleX(int rightPaddleX) {
-        this.rightPaddleX = rightPaddleX;
+    public void setX(int x) {
+        this.x = x;
     }
 
-    public int getRightPaddleY() {
-        return rightPaddleY;
+    public int getY() {
+        return y;
     }
 
-    public void setRightPaddleY(int rightPaddleY) {
-        this.rightPaddleY = rightPaddleY;
+    public void setY(int y) {
+        this.y = y;
     }
 
-    public int getRightPaddleHeight() {
-        return rightPaddleHeight;
+    public int getWidth() {
+        return width;
     }
 
-    public void setRightPaddleHeight(int rightPaddleHeight) {
-        this.rightPaddleHeight = rightPaddleHeight;
-    }
-
-    public int getRightPaddleWidth() {
-        return rightPaddleWidth;
-    }
-
-    public void setRightPaddleWidth(int rightPaddleWidth) {
-        this.rightPaddleWidth = rightPaddleWidth;
+    public int getHeight() {
+        return height;
     }
 }

@@ -6,7 +6,7 @@ import java.awt.Dimension;
 
 public class FieldPanel extends JPanel {
     // Instance variable components here
-    FieldComponents fieldComponents;
+    private FieldComponents fieldComponents;
     public FieldPanel(){
         setBackground(Color.BLACK);
 
@@ -15,5 +15,9 @@ public class FieldPanel extends JPanel {
         add(fieldComponents);
         fieldComponents.repaint();
         fieldComponents.revalidate();
+    }
+
+    public FieldComponents getFieldComponents(){
+        return fieldComponents;
     }
 }

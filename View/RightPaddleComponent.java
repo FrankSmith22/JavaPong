@@ -1,52 +1,44 @@
 package View;
-import javax.swing.JComponent;
 
 import java.awt.Color;
 import java.awt.Graphics;
 
 public class RightPaddleComponent{
-    private int rightPaddleX = 950;
-    private int rightPaddleY = 200;
-    private int rightPaddleWidth = 20; 
-    private int rightPaddleHeight = 150;
+    private int x = 950;
+    private int y = 200;
+    private int width = 20; 
+    private int height = 150;
 
     public void draw(Graphics g){
         g.setColor(Color.WHITE);
-        g.drawRect(rightPaddleX, rightPaddleY,
-            rightPaddleWidth, rightPaddleHeight);
-        g.fillRect(rightPaddleX, rightPaddleY,
-            rightPaddleWidth, rightPaddleHeight);
+        g.drawRect(x, y,
+            width, height);
+        g.fillRect(x, y,
+            width, height);
     }
 
-    public int getRightPaddleX() {
-        return rightPaddleX;
+    public int getX() {
+        return x;
     }
 
-    public void setRightPaddleX(int rightPaddleX) {
-        this.rightPaddleX = rightPaddleX;
+    public void setX(int x) {
+        this.x = x;
     }
 
-    public int getRightPaddleY() {
-        return rightPaddleY;
+    public int getY() {
+        return y;
     }
 
-    public void setRightPaddleY(int rightPaddleY) {
-        this.rightPaddleY = rightPaddleY;
+    public void setY(int y) {
+        this.y = y;
     }
 
-    public int getRightPaddleWidth() {
-        return rightPaddleWidth;
+    public int getWidth() {
+        return width;
     }
 
-    public void setRightPaddleWidth(int rightPaddleWidth) {
-        this.rightPaddleWidth = rightPaddleWidth;
+    public int getHeight() {
+        return height;
     }
 
-    public int getRightPaddleHeight() {
-        return rightPaddleHeight;
-    }
-
-    public void setRightPaddleHeight(int rightPaddleHeight) {
-        this.rightPaddleHeight = rightPaddleHeight;
-    }
 }

@@ -1,52 +1,44 @@
 package Model;
 
 public class LeftPaddleData {
-    private int leftPaddleX; // This represents the left paddle's top left x coord value
-    private int leftPaddleY; // And so on..
-    private int leftPaddleWidth;
-    private int leftPaddleHeight;
+    private int x; // This represents the left paddle's top left x coord value
+    private int y; // And so on..
+    private int width;
+    private int height;
     
 
     public LeftPaddleData(){
         this(50, 200, 20, 150); // TODO Adjust using getHeight method of FieldPanel
     }
 
-    public LeftPaddleData(int leftPaddleX, int leftPaddleY, int leftPaddleWidth, int leftPaddleHeight) {
-        this.leftPaddleX = leftPaddleX;
-        this.leftPaddleY = leftPaddleY;
-        this.leftPaddleWidth = leftPaddleWidth;
-        this.leftPaddleHeight = leftPaddleHeight;
+    public LeftPaddleData(int x, int y, int width, int height) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
     }
 
-    public int getLeftPaddleX() {
-        return leftPaddleX;
+    public int getX() {
+        return x;
     }
 
-    public void setLeftPaddleX(int leftPaddleX) {
-        this.leftPaddleX = leftPaddleX;
+    public void setX(int x) {
+        this.x = x;
     }
 
-    public int getLeftPaddleY() {
-        return leftPaddleY;
+    public int getY() {
+        return y;
     }
 
-    public void setLeftPaddleY(int leftPaddleY) {
-        this.leftPaddleY = leftPaddleY;
+    public void setY(int y) {
+        this.y = y;
     }
 
-    public int getLeftPaddleHeight() {
-        return leftPaddleHeight;
+    public int getWidth() {
+        return width;
     }
 
-    public void setLeftPaddleHeight(int leftPaddleHeight) {
-        this.leftPaddleHeight = leftPaddleHeight;
-    }
-
-    public int getLeftPaddleWidth() {
-        return leftPaddleWidth;
-    }
-
-    public void setLeftPaddleWidth(int leftPaddleWidth) {
-        this.leftPaddleWidth = leftPaddleWidth;
+    public int getHeight() {
+        return height;
     }
 }

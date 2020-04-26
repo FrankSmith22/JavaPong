@@ -4,46 +4,39 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 public class LeftPaddleComponent{
-    private int leftPaddleX = 50; // Pixels away from wall
-    private int leftPaddleY = 200; // Pixels away from ceiling
-    private int leftPaddleWidth = 20;
-    private int leftPaddleHeight = 150;
+    private int x = 50; // Pixels away from wall
+    private int y = 200; // Pixels away from ceiling
+    private int width = 20;
+    private int height = 150;
 
     public void draw(Graphics g){
         g.setColor(Color.WHITE);
-        g.drawRect(leftPaddleX, leftPaddleY, leftPaddleWidth, leftPaddleHeight);
-        g.fillRect(leftPaddleX, leftPaddleY, leftPaddleWidth, leftPaddleHeight);
+        g.drawRect(x, y, width, height);
+        g.fillRect(x, y, width, height);
     }
 
-    public int getLeftPaddleX() {
-        return leftPaddleX;
+    public int getX() {
+        return x;
     }
 
-    public void setLeftPaddleX(int leftPaddleX){
-        this.leftPaddleX = leftPaddleX;
+    public void setX(int x) {
+        this.x = x;
     }
 
-    public int getLeftPaddleY() {
-        return leftPaddleY;
+    public int getY() {
+        return y;
     }
 
-    public void setLeftPaddleY(int leftPaddleY) {
-        this.leftPaddleY = leftPaddleY;
+    public void setY(int y) {
+        this.y = y;
     }
 
-    public int getLeftPaddleHeight() {
-        return leftPaddleHeight;
+    public int getWidth() {
+        return width;
     }
 
-    public void setLeftPaddleHeight(int leftPaddleHeight) {
-        this.leftPaddleHeight = leftPaddleHeight;
+    public int getHeight() {
+        return height;
     }
 
-    public int getLeftPaddleWidth() {
-        return leftPaddleWidth;
-    }
-
-    public void setLeftPaddleWidth(int leftPaddleWidth) {
-        this.leftPaddleWidth = leftPaddleWidth;
-    }
 }

@@ -4,49 +4,48 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 public class BallComponent{
-    private int ballX = 495;
-    private int ballY = 275;
-    private int ballWidth = 25;
-    private int ballHeight = 25;
+    private int x;
+    private int y;
+    private int width;
+    private int height;
 
     public BallComponent(){
+        this(495, 275, 25, 25);
+    }
 
+    public BallComponent(int x, int y, int width, int height) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
     }
 
     public void draw(Graphics g) {
         g.setColor(Color.WHITE);
-        g.fillOval(ballX, ballY, ballWidth, ballHeight);
+        g.fillOval(x, y, width, height);
     }
 
-    public int getBallX() {
-        return ballX;
+    public int getX() {
+        return x;
     }
 
-    public void setBallX(int ballX) {
-        this.ballX = ballX;
+    public void setX(int x) {
+        this.x = x;
     }
 
-    public int getBallY() {
-        return ballY;
+    public int getY() {
+        return y;
     }
 
-    public void setBallY(int ballY) {
-        this.ballY = ballY;
+    public void setY(int y) {
+        this.y = y;
     }
 
-    public int getBallWidth() {
-        return ballWidth;
+    public int getWidth() {
+        return width;
     }
 
-    public void setBallWidth(int ballWidth) {
-        this.ballWidth = ballWidth;
-    }
-
-    public int getBallHeight() {
-        return ballHeight;
-    }
-
-    public void setBallHeight(int ballHeight) {
-        this.ballHeight = ballHeight;
+    public int getHeight() {
+        return height;
     }
 }
