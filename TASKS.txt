@@ -1,0 +1,5 @@
+- Reset ball position on collision with left and right walls
+    - Add point to opposing player 
+    - Check if either player has won yet
+- Keyboard listeners for left paddle and right paddle
+    - w and s, up arrow and down arrow keys respectively

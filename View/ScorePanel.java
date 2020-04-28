@@ -7,8 +7,8 @@ import java.awt.Color;
 import java.awt.GridLayout;
 
 public class ScorePanel extends JPanel {
-    private JButton P1 = new JButton ("P1");
-    private JButton P2 = new JButton ("P2");
+    private JButton P1 = new JButton ("0");
+    private JButton P2 = new JButton ("0");
 
     public ScorePanel(){
         super();
