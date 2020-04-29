@@ -4,6 +4,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.awt.Color;
 
 import Model.*;
 import View.*;
@@ -13,6 +14,7 @@ public class Controller implements KeyListener {
     LeftPaddleData leftPaddleData; // Refs for efficient access
     RightPaddleData rightPaddleData;
     BallData ballData;
+    int gameOver;
 
     View view;
     LeftPaddleComponent leftPaddleComponent;
@@ -57,10 +59,28 @@ public class Controller implements KeyListener {
 
     public void runGame() {
         // Game is running
-        checkCollision();
-        moveBall();
-
-        view.getFP().getFieldComponents().repaint();
+        gameOver = model.getScore().getGameOver();
+        if(gameOver == 0){
+            checkCollision();
+            moveBall();
+            view.getFP().getFieldComponents().repaint();
+        }
+        else{
+            System.out.println("Game over!");
+            view.getSP().getP1().setText("Game over, Player " + gameOver + " Won!");
+            view.getSP().getP2().setText("Game over, Player " + gameOver + " Won!");
+            if(gameOver == 1){
+                view.getSP().getP1().setBackground(Color.GREEN);
+                view.getSP().getP2().setBackground(Color.RED);
+            }
+            else{
+                view.getSP().getP1().setBackground(Color.RED);
+                view.getSP().getP2().setBackground(Color.GREEN);
+            }
+            ballData.setX(495);
+            ballData.setY(275);
+            timer.cancel();
+        }
     }
 
     public void moveBall() {

@@ -5,7 +5,7 @@ public class Score {
     private int playerOneScore;
     private int playerTwoScore;
     private final int MAX_SCORE; // Defines how many points needed till win
-    private boolean gameOver;
+    private int gameOver;
 
     public Score(){
         this(5);
@@ -14,7 +14,7 @@ public class Score {
         playerOneScore = 0;
         playerTwoScore = 0;
         this.MAX_SCORE = MAX_SCORE;
-        gameOver = false;
+        gameOver = 0;
     }
 
     public int getPlayerOneScore() {
@@ -24,7 +24,7 @@ public class Score {
     public void incPlayerOneScore() {
         this.playerOneScore++;
         if(this.playerOneScore >= this.MAX_SCORE){
-            gameOver = true;
+            gameOver = 1;
         }
     }
 
@@ -35,11 +35,11 @@ public class Score {
     public void incPlayerTwoScore() {
         this.playerTwoScore++;
         if(this.playerTwoScore >= this.MAX_SCORE){
-            gameOver = true;
+            gameOver = 2;
         }
     }
 
-    public boolean getGameOver(){
+    public int getGameOver(){
         return gameOver;
     }
 }

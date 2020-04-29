@@ -14,8 +14,10 @@ public class ScorePanel extends JPanel {
         super();
         setLayout(new GridLayout(1,2));
         
+        P1.setOpaque(true);
         P1.setBackground(Color.lightGray);
         add(P1);
+        P2.setOpaque(true);
         P2.setBackground(Color.lightGray);
         add(P2);
     }

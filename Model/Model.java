@@ -17,12 +17,7 @@ public class Model {
         score = new Score();
         leftPaddleData = new LeftPaddleData(); // Calling empty constructor inits with some default values
         rightPaddleData = new RightPaddleData(); // Prefer to call using getHeight of FieldPanel
-        ballData = new BallData(495, 275, x, y, 25, 25); //TODO change this to generate random starting direction values
-        /*
-        So far, Score works like this: initial scores set to 0,
-        then methods will be used to increment scores, checking to see if
-        score is higher or equal to max. if it is, set gameOver to true
-        */
+        ballData = new BallData(495, 275, x, y, 25, 25);
     }
 
     public Score getScore(){
