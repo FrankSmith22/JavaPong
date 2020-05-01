@@ -1,5 +1,10 @@
 package View;
-
+/***************************************
+* Filename: BallComponent.java
+* Short description: This class describes the components of the ball
+* @author Frank Smith, Honghao Wei, Luthfi Mohammed, Hunter Jones
+* @version  4/30/2020
+***************************************/
 import java.awt.Color;
 import java.awt.Graphics;
 

@@ -1,5 +1,10 @@
 package Model;
-
+/***************************************
+* Filename: BallData.java
+* Short description: This class stores data for the ball component
+* @author Frank Smith, Honghao Wei, Luthfi Mohammed, Hunter Jones
+* @version  4/30/2020
+***************************************/
 public class BallData {
     private int x;
     private int y;

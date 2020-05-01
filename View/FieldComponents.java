@@ -1,5 +1,10 @@
 package View;
-
+/***************************************
+* Filename: FieldComponents.java
+* Short description: This class display the components of the field
+* @author Frank Smith, Honghao Wei, Luthfi Mohammed, Hunter Jones
+* @version  4/30/2020
+***************************************/
 import javax.swing.JComponent;
 import java.awt.Graphics;
 

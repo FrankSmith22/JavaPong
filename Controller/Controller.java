@@ -1,5 +1,10 @@
 package Controller;
-
+/***************************************
+* Filename: Controller.java
+* Short description: This class handles collision checking, running the timer, and mediates between View and Model
+* @author Frank Smith, Honghao Wei, Luthfi Mohammed, Hunter Jones
+* @version  4/30/2020
+***************************************/
 import java.util.Timer;
 import java.util.TimerTask;
 import java.awt.event.KeyEvent;
@@ -60,26 +65,37 @@ public class Controller implements KeyListener {
     public void runGame() {
         // Game is running
         gameOver = model.getScore().getGameOver();
-        if(gameOver == 0){
-            checkCollision();
-            moveBall();
-            view.getFP().getFieldComponents().repaint();
-        }
-        else{
-            System.out.println("Game over!");
-            view.getSP().getP1().setText("Game over, Player " + gameOver + " Won!");
-            view.getSP().getP2().setText("Game over, Player " + gameOver + " Won!");
-            if(gameOver == 1){
-                view.getSP().getP1().setBackground(Color.GREEN);
-                view.getSP().getP2().setBackground(Color.RED);
-            }
-            else{
-                view.getSP().getP1().setBackground(Color.RED);
-                view.getSP().getP2().setBackground(Color.GREEN);
-            }
-            ballData.setX(495);
-            ballData.setY(275);
-            timer.cancel();
+        switch(gameOver){
+            //If zero, no one has won yet
+            case 0: checkCollision();
+                    moveBall();
+                    view.getFP().getFieldComponents().repaint();
+                    break;
+            // If 1, player one has won
+            case 1: System.out.println("Game over!");
+                    view.getSP().getP1().setText("Game over, Player " + gameOver + " Won!");
+                    view.getSP().getP2().setText("Game over, Player " + gameOver + " Won!");
+                    view.getSP().getP1().setBackground(Color.GREEN);
+                    view.getSP().getP2().setBackground(Color.RED);
+                    ballData.setX(495);
+                    ballData.setY(275);
+                    timer.cancel();
+                    break;
+            // If 2, player two has won
+            case 2: System.out.println("Game over!");
+                    view.getSP().getP1().setText("Game over, Player " + gameOver + " Won!");
+                    view.getSP().getP2().setText("Game over, Player " + gameOver + " Won!");
+                    view.getSP().getP1().setBackground(Color.RED);
+                    view.getSP().getP2().setBackground(Color.GREEN);
+                    ballData.setX(495);
+                    ballData.setY(275);
+                    timer.cancel();
+                    break;
+            default: System.out.println("This is an invalid gameOver value.. stopping the game");
+                    ballData.setX(495);
+                    ballData.setY(275);
+                    timer.cancel();
+                    break;
         }
     }
 
@@ -128,9 +144,12 @@ public class Controller implements KeyListener {
         }
 
         // Check if ball hits right wall
-        // If true, reset ball position
-        // Give player one one point
-        // Update the score button text with new score
+         if (ballData.getX() >= 1000) {
+            ballData.setX(495);
+            ballData.setY(275);
+            model.getScore().incPlayerOneScore();
+            view.getSP().getP1().setText( Integer.toString(model.getScore().getPlayerOneScore()) );                                        
+        }
     }
 
     @Override
@@ -143,27 +162,40 @@ public class Controller implements KeyListener {
         int key = e.getKeyCode();
         //87 w 83 s 40 downarrow 38 uparrow
         if(key == 40) {
-            rightPaddleData.setY(rightPaddleData.getY() + 15);
-            rightPaddleComponent.setY(rightPaddleData.getY());
-            view.getFP().getFieldComponents().repaint();
+            //Check for right paddle collision with floor, move if not
+            if (!((rightPaddleData.getY() + rightPaddleData.getHeight()) >= 600)){
+                rightPaddleData.setY(rightPaddleData.getY() + 15);
+                rightPaddleComponent.setY(rightPaddleData.getY());
+                view.getFP().getFieldComponents().repaint();
+            }
         }
 
         if(key == 38) {
-            rightPaddleData.setY(rightPaddleData.getY() - 15);
-            rightPaddleComponent.setY(rightPaddleData.getY());
-            view.getFP().getFieldComponents().repaint();
+            //Check for right paddle collision with ceiling, move if not
+            if(!(rightPaddleData.getY() <= 0)){
+                rightPaddleData.setY(rightPaddleData.getY() - 15);
+                rightPaddleComponent.setY(rightPaddleData.getY());
+                view.getFP().getFieldComponents().repaint();
+            }
         }
 
         if(key == 83) {
-            leftPaddleData.setY(leftPaddleData.getY() + 15);
-            leftPaddleComponent.setY(leftPaddleData.getY());
-            view.getFP().getFieldComponents().repaint();
+            //Check for left paddle collision with floor, move if not
+            if (!((leftPaddleData.getY() + rightPaddleData.getHeight()) >= 600)){
+                leftPaddleData.setY(leftPaddleData.getY() + 15);
+                leftPaddleComponent.setY(leftPaddleData.getY());
+                view.getFP().getFieldComponents().repaint();
+            }
         }
 
         if(key == 87) {
-            leftPaddleData.setY(leftPaddleData.getY() - 15);
-            leftPaddleComponent.setY(leftPaddleData.getY());
-            view.getFP().getFieldComponents().repaint();
+            //Check for left paddle collision with ceiling, move if not
+            if(!(leftPaddleData.getY() <= 0)){
+                leftPaddleData.setY(leftPaddleData.getY() - 15);
+                leftPaddleComponent.setY(leftPaddleData.getY());
+                view.getFP().getFieldComponents().repaint();
+            }
+            
         }
     }
 

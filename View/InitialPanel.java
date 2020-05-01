@@ -1,5 +1,10 @@
 package View;
-
+/***************************************
+* Filename: InitialPanel.java
+* Short description: This class has access to south and field panel
+* @author Frank Smith, Honghao Wei, Luthfi Mohammed, Hunter Jones
+* @version  4/30/2020
+***************************************/
 
 import java.awt.BorderLayout;
 import javax.swing.JPanel;

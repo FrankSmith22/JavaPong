@@ -1,5 +1,10 @@
 package View;
-
+/***************************************
+* Filename: FieldPanel.java
+* Short description: This class display the field
+* @author Frank Smith, Honghao Wei, Luthfi Mohammed, Hunter Jones
+* @version  4/30/2020
+***************************************/
 import javax.swing.JPanel;
 import java.awt.Color;
 import java.awt.Dimension;

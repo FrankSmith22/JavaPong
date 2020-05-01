@@ -1,5 +1,10 @@
 package View;
-
+/***************************************
+* Filename: ScorePanel.java
+* Short description: This class keep track of players' score
+* @author Frank Smith, Honghao Wei, Luthfi Mohammed, Hunter Jones
+* @version  4/30/2020
+***************************************/
 import javax.swing.JPanel;
 import javax.swing.JButton;
 

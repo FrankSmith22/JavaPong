@@ -1,5 +1,10 @@
 package View;
-
+/***************************************
+* Filename: View.java
+* Short description: This class has the access to the frame and panels
+* @author Frank Smith, Honghao Wei, Luthfi Mohammed, Hunter Jones
+* @version  4/30/2020
+***************************************/
 public class View {
     private InitialFrame iF; //Frame for holding the InitialPanel
     private InitialPanel iP; //Panel for holding the ScorePanel and FieldPanel

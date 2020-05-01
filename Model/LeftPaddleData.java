@@ -1,5 +1,10 @@
 package Model;
-
+/***************************************
+* Filename: LeftPaddleData.java
+* Short description: This class describes the data of the left paddle
+* @author Frank Smith, Honghao Wei, Luthfi Mohammed, Hunter Jones
+* @version  4/30/2020
+***************************************/
 public class LeftPaddleData {
     private int x; // This represents the left paddle's top left x coord value
     private int y; // And so on..

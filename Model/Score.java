@@ -1,5 +1,10 @@
 package Model;
-
+/***************************************
+* Filename: Score.java
+* Short description: This class defines the rule of the game
+* @author Frank Smith, Honghao Wei, Luthfi Mohammed, Hunter Jones
+* @version  4/30/2020
+***************************************/
 public class Score {
 
     private int playerOneScore;

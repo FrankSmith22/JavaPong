@@ -1,4 +1,10 @@
 package Model;
+/***************************************
+* Filename: Model.java
+* Short description: This class ...
+* @author Frank Smith, Honghao Wei, Luthfi Mohammed, Hunter Jones
+* @version  4/30/2020
+***************************************/
 import java.util.Random;
 public class Model {
     private Score score;
@@ -17,7 +23,7 @@ public class Model {
         score = new Score();
         leftPaddleData = new LeftPaddleData(); // Calling empty constructor inits with some default values
         rightPaddleData = new RightPaddleData(); // Prefer to call using getHeight of FieldPanel
-        ballData = new BallData(495, 275, x, y, 25, 25);
+        ballData = new BallData(495, 275, -6, y, 25, 25);
     }
 
     public Score getScore(){

@@ -1,5 +1,10 @@
 package Model;
-
+/***************************************
+* Filename: RightPaddleData.java
+* Short description: This class describes the data of the right paddle
+* @author Frank Smith, Honghao Wei, Luthfi Mohammed, Hunter Jones
+* @version  4/30/2020
+***************************************/
 public class RightPaddleData {
     private int x;
     private int y;

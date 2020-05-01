@@ -1,5 +1,10 @@
 package View;
-
+/***************************************
+* Filename: InitialFrame.java
+* Short description: This class has the access to initial panel
+* @author Frank Smith, Honghao Wei, Luthfi Mohammed, Hunter Jones
+* @version  4/30/2020
+***************************************/
 import javax.swing.JFrame;
 
 public class InitialFrame extends JFrame {
