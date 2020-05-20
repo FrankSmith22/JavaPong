@@ -15,19 +15,19 @@ import Model.*;
 import View.*;
 
 public class Controller implements KeyListener {
-    Model model;
-    LeftPaddleData leftPaddleData; // Refs for efficient access
-    RightPaddleData rightPaddleData;
-    BallData ballData;
-    int gameOver;
+    private Model model;
+    private LeftPaddleData leftPaddleData; // Refs for efficient access
+    private RightPaddleData rightPaddleData;
+    private BallData ballData;
+    private int gameOver;
 
-    View view;
-    LeftPaddleComponent leftPaddleComponent;
-    RightPaddleComponent rightPaddleComponent;
-    BallComponent ballComponent;
+    private View view;
+    private LeftPaddleComponent leftPaddleComponent;
+    private RightPaddleComponent rightPaddleComponent;
+    private BallComponent ballComponent;
 
-    TimerTask timerTask;
-    Timer timer;
+    private TimerTask timerTask;
+    private Timer timer;
 
     public Controller(Model model, View view) {
         // Init Model

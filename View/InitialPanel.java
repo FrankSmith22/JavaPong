@@ -10,8 +10,8 @@ import java.awt.BorderLayout;
 import javax.swing.JPanel;
 
 public class InitialPanel extends JPanel {
-    ScorePanel sP;
-    FieldPanel fP;
+    private ScorePanel sP;
+    private FieldPanel fP;
 
     public InitialPanel() {
         super();

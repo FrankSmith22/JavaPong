@@ -34,12 +34,4 @@ public class ScorePanel extends JPanel {
     public JButton getP2(){
         return P2;
     }
-    
-    public void setP1(JButton P1){
-        this.P1 = P1;
-    }
-
-    public void setP2(JButton P2){
-        this.P2 = P2;
-    }
 }

@@ -8,7 +8,7 @@ package View;
 import javax.swing.JFrame;
 
 public class InitialFrame extends JFrame {
-    InitialPanel iP;
+    private InitialPanel iP;
 
     public InitialFrame(){
         super("Java Pong!");

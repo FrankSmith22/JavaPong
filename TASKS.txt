@@ -1,2 +1,0 @@
-- Reset ball position on collision with right wall
-    - Add point to opposing player 
