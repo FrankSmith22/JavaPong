@@ -1,4 +1,5 @@
 package Controller;
+
 /***************************************
 * Filename: Controller.java
 * Short description: This class handles collision checking, running the timer, and mediates between View and Model
@@ -7,14 +8,16 @@ package Controller;
 ***************************************/
 import java.util.Timer;
 import java.util.TimerTask;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.Color;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.awt.Color;
 
 import Model.*;
 import View.*;
 
-public class Controller implements KeyListener {
+public class Controller implements KeyListener{
     private Model model;
     private LeftPaddleData leftPaddleData; // Refs for efficient access
     private RightPaddleData rightPaddleData;
@@ -42,14 +45,28 @@ public class Controller implements KeyListener {
         this.rightPaddleComponent = view.getFP().getFieldComponents().getRightPaddleComponent();
         this.ballComponent = view.getFP().getFieldComponents().getBallComponent();
 
-        // Assign listeners to paddles
+        view.getIF().repaint();
+        view.getIF().revalidate();
+
+        // attach keyboard listener
         view.getIF().addKeyListener(this);
 
-        // Run the game!
-        timerTask = new GameTimer();
-        timer = new Timer(true);
-        timer.schedule(timerTask, 1000, 17);
-        // Add gameover condition check here, and cancel timer
+        view.getStartPanel().getStartButton().addActionListener(new ActionListener(){
+			@Override
+			public void actionPerformed(ActionEvent e) {
+                view.getIF().remove(view.getStartPanel());
+                view.getIF().add(view.getIP());
+                view.getIF().repaint();
+                view.getIF().revalidate();
+
+                
+
+                // Run the game!
+                timerTask = new GameTimer();
+                timer = new Timer(true);
+                timer.schedule(timerTask, 1000, 17);
+			}
+        });
     }
 
     // Inner class because it's very small

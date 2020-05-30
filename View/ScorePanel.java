@@ -21,9 +21,11 @@ public class ScorePanel extends JPanel {
         
         P1.setOpaque(true);
         P1.setBackground(Color.lightGray);
+        P1.setFocusable(false);
         add(P1);
         P2.setOpaque(true);
         P2.setBackground(Color.lightGray);
+        P2.setFocusable(false);
         add(P2);
     }
     

@@ -23,7 +23,7 @@ public class Model {
     private int randomXDir(){
         Random random = new Random();
         int xDir = random.nextInt(7);
-        if(xDir == 0 || xDir == 1 || xDir == 2){
+        if(xDir == 0 || xDir == 1 || xDir == 2 || xDir == 3){
             randomXDir();
         }
         else if(System.currentTimeMillis() % 2 == 0){

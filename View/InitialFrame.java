@@ -9,6 +9,7 @@ import javax.swing.JFrame;
 
 public class InitialFrame extends JFrame {
     private InitialPanel iP;
+    private StartPanel startPanel;
 
     public InitialFrame(){
         super("Java Pong!");
@@ -17,10 +18,15 @@ public class InitialFrame extends JFrame {
         setVisible(true);
 
         iP = new InitialPanel();
-        add(iP);
+        startPanel = new StartPanel();
+        add(startPanel);
     }
 
     public InitialPanel getiP() {
         return iP;
+    }
+
+    public StartPanel getStartPanel(){
+        return startPanel;
     }
 }
